@@ -28,6 +28,9 @@ async def sim_alex2():
     
     i = random.randint(1,len(alex_list)) - 1
     await bot.say(alex_list[i])
+    
+def tester():
+    time.sleep(1)
    
 
 # token hidden in a file ignored by git
