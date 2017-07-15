@@ -10,11 +10,14 @@ async def on_ready():
 async def hello(*args):
     return await bot.say("Hello, world!")
 
-@bot.command()
-async def auto_react(ID,string):
-    string.lower()
+@bot.command(pass_context = True)
+async def auto_react(ctx,ID,string):
+    string = string.upper()
+    message = await bot.get_message(ctx.message.channel,ID)
     for char in string:
-        await bot.add_reaction(ID,':regional_indicator_' + char + ':')
+        emoji = '\\N{REGIONAL INDICATOR SYMBOL LETTER ' + char + '}'
+        emoji = emoji.encode().decode('unicode_escape')
+        await bot.add_reaction(message,emoji)
 
 # token hidden in a file ignored by git
 bot.run(open('token.txt', 'r').read())
