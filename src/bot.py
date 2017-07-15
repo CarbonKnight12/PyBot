@@ -28,6 +28,10 @@ async def sim_alex2():
     
     i = random.randint(1,len(alex_list)) - 1
     await bot.say(alex_list[i])
+    
+@bot.command()
+aysnc def anything_you_want():
+    await bot.say(str(time.time()))
 
 # token hidden in a file ignored by git
 bot.run(open('token.txt', 'r').read())
