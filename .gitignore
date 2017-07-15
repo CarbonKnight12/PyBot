@@ -1,0 +1,2 @@
+# public should not see the bot token
+/src/token.txt
