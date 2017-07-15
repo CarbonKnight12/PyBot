@@ -36,3 +36,5 @@ async def sim_alex():
 bot.run(open('token.txt', 'r').read())
 
 #comment2 bitch
+#fuckingchrist
+#watch you damn language
