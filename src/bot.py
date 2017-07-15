@@ -12,6 +12,16 @@ async def on_ready():
 async def hello(*args):
     return await bot.say("Hello, world!")
 
+@bot.command(pass_context = True)
+async def auto_react(ctx,ID,string):
+    await bot.delete_message(ctx.message)
+    string = string.upper()
+    message = await bot.get_message(ctx.message.channel,ID)
+    for char in string:
+        emoji = '\\N{REGIONAL INDICATOR SYMBOL LETTER ' + char + '}'
+        emoji = emoji.encode().decode('unicode_escape')
+        await bot.add_reaction(message,emoji)	
+	
 @bot.command()
 async def sim(name):
 	if name.lower() = "alex":
