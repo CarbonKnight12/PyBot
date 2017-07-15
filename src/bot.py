@@ -36,4 +36,4 @@ def tester():
 # token hidden in a file ignored by git
 bot.run(open('token.txt', 'r').read())
 
-#8=====D
+#fuckingchrist
