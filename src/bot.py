@@ -37,3 +37,4 @@ def tester():
 bot.run(open('token.txt', 'r').read())
 
 #fuckingchrist
+#watch you damn language
